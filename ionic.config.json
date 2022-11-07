@@ -1,0 +1,7 @@
+{
+  "name": "RecyclingNearMe",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
