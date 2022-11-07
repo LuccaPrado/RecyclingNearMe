@@ -1,4 +1,4 @@
-import {ChangeDetectorRef, Component, Input, OnInit} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import {DataService, PlaceList} from '../services/data.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class HomePage implements OnInit {
     distance = 3;
 
 
-    constructor(private data: DataService, private ref: ChangeDetectorRef) {
+    constructor(private data: DataService) {
 
     }
 
@@ -32,7 +32,6 @@ export class HomePage implements OnInit {
         const crd = pos.coords;
         this.lat = crd.latitude;
         this.lon = crd.longitude;
-        //this.myAddress = this.data.getUserAddress(this.lat, this.lon);
         this.data.getPlaces(this.lat, this.lon, this.distance).subscribe(placeResponse => {
             this.placeResp = placeResponse.content;
         });

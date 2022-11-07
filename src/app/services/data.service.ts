@@ -46,7 +46,7 @@ export class DataService {
         const httpOptions = {
             headers: new HttpHeaders({
                 'X-RapidAPI-Host': 'geolocation-utils1.p.rapidapi.com',
-                'X-RapidAPI-Key': ''
+                'X-RapidAPI-Key': 'My_API_KEY'
             })
         };
         // eslint-disable-next-line max-len
